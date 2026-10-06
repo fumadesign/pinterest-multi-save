@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<style>
+  body{width:320px;margin:0;padding:16px;background:#efe3d3;color:#33281f;font:14px/1.4 system-ui,"Hiragino Sans","Yu Gothic",sans-serif}
+  header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+  h1{font-size:16px;margin:0}
+  #gear{cursor:pointer;font-size:18px;background:none;border:0}
+  #list{max-height:260px;overflow:auto}
+  label{display:flex;gap:8px;align-items:center;padding:5px 2px;cursor:pointer}
+  #save{width:100%;margin-top:10px;padding:11px;border:0;border-radius:22px;background:#d0103a;color:#fff;font-weight:700;font-size:14px;cursor:pointer}
+  #save:disabled{opacity:.5;cursor:default}
+  hr{border:0;border-top:1px solid #d9c9b5;margin:14px 0 10px}
+  h2{font-size:13px;font-weight:400;color:#7a6a5a;margin:0 0 6px}
+  .row{display:flex;gap:6px}
+  input[type=text]{flex:1;padding:8px;border:1px solid #d9c9b5;border-radius:10px;background:#f6ede1}
+  #create{padding:8px 12px;border:0;border-radius:14px;background:#3a2a20;color:#fff;cursor:pointer}
+  #msg{margin-top:8px;font-size:12px;white-space:pre-wrap}
+</style></head>
+<body>
+  <header><h1>複数ボード保存</h1><button id="gear" title="設定">⚙</button></header>
+  <div id="list">読み込み中…</div>
+  <button id="save">選択したボードに保存</button>
+  <hr>
+  <h2>新しいボードを作って保存</h2>
+  <div class="row"><input id="name" type="text" placeholder="新規ボード名"><button id="create">＋ 作成</button></div>
+  <div id="msg"></div>
+  <script src="popup.js"></script>
+</body></html>

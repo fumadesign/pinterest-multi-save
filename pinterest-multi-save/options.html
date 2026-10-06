@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><title>設定</title>
+<style>body{max-width:520px;margin:40px auto;font:14px/1.6 system-ui,sans-serif}input{width:100%;padding:8px;margin:8px 0}button{padding:8px 16px}</style></head>
+<body>
+<h2>Pinterest アクセストークン</h2>
+<p>Pinterest Developersでアプリを作成し、スコープ <code>boards:read boards:write pins:read pins:write</code> のアクセストークンを貼り付けてください。</p>
+<input id="token" type="password" placeholder="pina_...">
+<button id="save">保存</button> <span id="ok"></span>
+<script>
+chrome.storage.local.get("token").then(({token}) => document.getElementById("token").value = token || "");
+document.getElementById("save").onclick = async () => {
+  await chrome.storage.local.set({ token: document.getElementById("token").value.trim() });
+  document.getElementById("ok").textContent = "保存しました";
+};
+</script></body></html>

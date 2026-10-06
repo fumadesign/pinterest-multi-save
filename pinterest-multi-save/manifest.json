@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Pinterest 複数ボード保存",
+  "version": "1.0.0",
+  "description": "表示中のピンを複数のボードへ一括保存します",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://api.pinterest.com/*"],
+  "action": { "default_popup": "popup.html", "default_title": "複数ボード保存" },
+  "options_page": "options.html"
+}
